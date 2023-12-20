@@ -17,9 +17,15 @@ This is a simple weather monitoring app written in [Ruby on Rails](https://rubyo
   - `OTEL_TRACES_EXPORTER` (only required for OpenTelemetry usage) - this tells where we export our system data from OpenTelemetry. Accepted values are (console, otlp, zipkin, logging). For more information visit [OpenTelemetry Docs](https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/).
 4. Run `bundle install`
 5. Start the rails server using this command `rails s`
-6. Visit `http://localhost:3000`.
-7. On the input, type a city that you wish to get the weather data then press the `Search` button.
-8. It will show you the current weather data for the city that you searched.
+6. Visit `http://localhost:3000/api/v1/search?city=<city name>`. Here is a sample of the API response.
 
-* To Improve
-  - Tailwind and HTMX dependencies are currently being loaded into the app using CDN which is not recommended in production use.
+      ```
+        {
+          "city":"New York",
+          "weather":"Clear",
+          "description":"clear sky",
+          "temperature":"0.82 °C",
+          "humidity":"59%",
+          "wind_speed":"20.376hm/hr"
+        }
+      ```
