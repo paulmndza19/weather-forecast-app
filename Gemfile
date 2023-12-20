@@ -76,3 +76,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "opentelemetry-sdk", "~> 1.3"
+gem "opentelemetry-instrumentation-all", "~> 0.54.0"
