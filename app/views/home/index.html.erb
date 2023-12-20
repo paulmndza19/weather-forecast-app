@@ -1,0 +1,32 @@
+<div class="antialiased min-h-screen bg-gray-100 flex items-center w-full">
+  <div class="w-full max-w-sm mx-auto">
+    <div class="">
+      <label class="font-semibold text-lg"> Search for a city </label>
+      <div class="flex flex-row">
+        <input
+          type="text"
+          name="city"
+          class="shadow rounded-lg border border-2 border-solid border-gray-800 w-1/2 h-14 mb-8 py-4 px-8"
+        >
+        <button
+          hx-get="/search"
+          hx-trigger="click"
+          hx-target="#weather-content"
+          hx-include="[name='city']"
+          class="ml-4 rounded-lg h-14 bg-white dark:bg-gray-800 text-gray-800 text-base dark:text-white w-1/4"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <div id="weather-content" class="bg-white shadow rounded-lg p-5 dark:bg-gray-800 w-full">
+
+    </div>
+
+    <div class="mt-10">
+      Build with <a class="underline text-purple-600" href="https://rubyonrails.org/">Ruby on Rails</a>,
+      <a class="underline text-purple-600" href="https://openweathermap.org/">OpenWeatherMap</a>,
+      and <a class="underline text-purple-600" href="https://tailwindcss.com/">TailwindCSS</a>
+    </div>
+  </div>
+</div>
